@@ -1,4 +1,6 @@
 public/
+_book/
+docs/
 libs/
 rsconnect/
 README.html

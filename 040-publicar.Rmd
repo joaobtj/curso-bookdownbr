@@ -37,4 +37,6 @@ Use o GitHUb Actions para atualizar o site sempre que um commit for enviado.
 
 `usethis::use_github_action("bookdown")`
 
+Também é necessário usar o [`renv`](https://rstudio.github.io/renv/articles/renv.html) para gerenciar os pacotes.
+
 Para finalizar, basta configurar a aba Settings -> Pages 
