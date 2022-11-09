@@ -2,11 +2,11 @@
 title: "Publicando um e-book com o bookdown"
 author: "João B. Tolentino Jr."
 date: "`r Sys.Date()`"
-description: "Este é um exemplo de um livro publicado com o pacote **bookdown** no formato *gitbook*"
+description: "Este material destina-se a explicar a publicação de um e-book com o pacote *bookdown* no formato *gitbook*"
 cover-image: image/cover.jpg
 apple-touch-icon: image/cover.jpg
 favicon: image/favicon.ico
-url: 'https\://curso-bookdown.tolentino.pro.br'
+url: 'https\://curso-bookdownbr.tolentino.pro.br'
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
