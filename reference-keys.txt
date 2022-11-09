@@ -5,6 +5,9 @@ escrevendo-um-e-book
 bkd
 output
 index0
+funcionalidades
+página-de-erro-404
+metadados-para-compartilhamento
 publicar
 rstudio-connect
 netlify-drop

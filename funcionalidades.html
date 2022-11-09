@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Publicando um e-book com o bookdown</title>
+  <title>Capítulo 5 Funcionalidades | Publicando um e-book com o bookdown</title>
   <meta name="description" content="Este material destina-se a explicar a publicação de um e-book com o pacote bookdown no formato gitbook" />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Publicando um e-book com o bookdown" />
+  <meta property="og:title" content="Capítulo 5 Funcionalidades | Publicando um e-book com o bookdown" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://curso-bookdownbr.tolentino.pro.br/image/cover.jpg" />
   <meta property="og:description" content="Este material destina-se a explicar a publicação de um e-book com o pacote bookdown no formato gitbook" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Publicando um e-book com o bookdown" />
+  <meta name="twitter:title" content="Capítulo 5 Funcionalidades | Publicando um e-book com o bookdown" />
   
   <meta name="twitter:description" content="Este material destina-se a explicar a publicação de um e-book com o pacote bookdown no formato gitbook" />
   <meta name="twitter:image" content="https://curso-bookdownbr.tolentino.pro.br/image/cover.jpg" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="image/cover.jpg" />
   <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
-
-<link rel="next" href="bkd.html"/>
+<link rel="prev" href="index0.html"/>
+<link rel="next" href="publicar.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,58 +176,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Publicando um e-book com o bookdown</h1>
-<p class="author"><em>João B. Tolentino Jr.</em></p>
-<p class="date"><em>2022-11-09</em></p>
+<div id="funcionalidades" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> Funcionalidades<a href="funcionalidades.html#funcionalidades" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="página-de-erro-404" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Página de erro 404<a href="funcionalidades.html#página-de-erro-404" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Se o leitor tentar acessar uma página em seu livro que não pode ser encontrada, o navegador irá mostrar a página de erro 404.</p>
+<p>Esta página pode ser personalizada adicionando um arquivo com o nome <code>_404.Rmd</code> ou <code>_404.md</code> no diretório do projeto.</p>
 </div>
-<div id="o-pacote-bookdown" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> O pacote <strong>bookdown</strong><a href="index.html#o-pacote-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="https://bookdown.org/yihui/bookdown/images/logo.png" style="display: block; margin: auto;" /></p>
-<p>O pacote <strong>bookdown</strong>, de autoria de <a href="https://yihui.org">Yihui Xie</a>, combina a simplicidade da linguagem <a href="http://rmarkdown.rstudio.com/"><em>R Markdown</em></a> com as funcionalidades do (<em>Pandoc</em>)[<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a>].</p>
-<p>Segundo o autor, sua utilização é adequada para escrever livros, artigos longos ou informes, sendo as principais funcionalidades:</p>
-<ul>
-<li>numeração automáticas de equações, teoremas, figuras, tabelas, etc e referências cruzadas destas.</li>
-<li>gerar múltiplos formatos de saída, como HTML, PDF, EPUB.</li>
-</ul>
-<p>E tudo isso com um visual, no mínimo, agradável. O principal estilo é o <a href="https://www.gitbook.com/">GitBook</a>.</p>
-<div id="preparativos-iniciais" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Preparativos iniciais<a href="index.html#preparativos-iniciais" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>O pacote <strong>bookdown</strong> pode ser instalado do CRAN ou Github:</p>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-</details>
-<p>A documentação completa pode ser encontrada em <a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> (<em>em inglês</em>)</p>
-<p>Além disso, você vai precisar do <a href="https://cran.r-project.org/">R</a> <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> (versão &gt; 1.0.0)</p>
-<p>Para compilar em PDF, você precisa do XeLaTeX, que pode ser encontrado junto com o pacote TinyTeX (<a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>).</p>
-<p>Um exemplo pode ser encontrado em <a href="https://github.com/rstudio/bookdown-demo/" class="uri">https://github.com/rstudio/bookdown-demo/</a> ou para um exemplo mínimo, <a href="https://github.com/yihui/bookdown-minimal/" class="uri">https://github.com/yihui/bookdown-minimal/</a>.</p>
-</div>
-<div id="escrevendo-um-e-book" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Escrevendo um e-book<a href="index.html#escrevendo-um-e-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Um e-book típico contém vários capítulos. Cada arquivo Rmd deve conter um e apenas um capítulo, definido por um título de primeiro nível <code>#</code>.</p>
-<ul>
-<li>index.Rmd</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Prefácio {-}</span></span></code></pre></div>
-<ul>
-<li>01.intro.Rmd</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introdução {#intro}</span></span>
-<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a>Aqui está uma breve apresentação deste e-book.</span></code></pre></div>
-<ul>
-<li>02.revisao.Rmd</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Revisão de literatura {#revisao}</span></span>
-<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a>Aqui está uma revisão do assunto.</span>
-<span id="cb4-4"><a href="index.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="index.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assunto 1 {#a2}</span></span>
-<span id="cb4-6"><a href="index.html#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="index.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assunto 2 {#a2}</span></span></code></pre></div>
-<p>Os arquivos de configuração são escritos na linguagem YAML (<a href="https://pt.wikipedia.org/wiki/YAML" class="uri">https://pt.wikipedia.org/wiki/YAML</a>). São eles: <code>_bookdown.yml</code> (<a href="bkd.html#bkd">Seção: O arquivo <code>_bookdown.yml</code></a>), <code>_output.yml</code> (<a href="output.html#output">Seção: O arquivo <code>_output.yml</code></a>). Além disso, mais configurações são adicionadas ao cabeçalho do primeiro arquivo Rmd (<code>index.Rmd</code>) (<a href="#index">Seção: O arquivo <code>index.Rmd</code></a>).</p>
+<div id="metadados-para-compartilhamento" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Metadados para compartilhamento<a href="funcionalidades.html#metadados-para-compartilhamento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metadados que são usados no compartilhamento sem redes sociais (Twitter, Facebook, etc.). No arquivo <code>index.Rmd</code>, pode-se configurar os parâmetros <code>url</code>, <code>cover-image</code>, <code>title</code> e <code>description</code>. Estes parâmetros são usados para criar um <em>card</em> detalhado no compartilhamento.</p>
 
 </div>
 </div>
@@ -236,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="bkd.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index0.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="publicar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -268,7 +226,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joaobtj/curso-bookdownbr/edit/main/index.Rmd",
+"link": "https://github.com/joaobtj/curso-bookdownbr/edit/main/031-func.Rmd",
 "text": "Editar"
 },
 "history": {
@@ -276,7 +234,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joaobtj/curso-bookdownbr/blob/main/index.Rmd",
+"link": "https://github.com/joaobtj/curso-bookdownbr/blob/main/031-func.Rmd",
 "text": null
 },
 "download": null,
