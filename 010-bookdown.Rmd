@@ -9,7 +9,7 @@ before_chapter_script: rm.R
 after_chapter_script:
 edit: https://github.com/joaobtj/curso-bookdownbr/edit/main/%s
 view: https://github.com/joaobtj/curso-bookdownbr/blob/main/%s
-output_dir: public 
+output_dir: _book 
 language:
   label:
     fig: 'Figura '

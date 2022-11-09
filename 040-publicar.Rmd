@@ -1,4 +1,4 @@
-# Publicar o e-book
+# Publicar o e-book  {#publicar}
 
 Após finalizar a escrita do conteúdo, é necessário renderizá-lo para que seja possível publicá-lo.
 
@@ -30,5 +30,9 @@ Se você utiliza o serviço do GitHub para trabalhar em equipe, uma opção é o
 
 Após iniciar o projeto no RStudio, conecte com o GitHub pelos comandos
 
+`usethis::use_git()` e `usethis::use_github()`
 
 
+Use o GitHUb Actions para atualizar o site sempre que um commit for enviado.
+
+`usethis::use_github_action("bookdown")`
