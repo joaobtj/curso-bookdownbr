@@ -36,3 +36,5 @@ Após iniciar o projeto no RStudio, conecte com o GitHub pelos comandos
 Use o GitHUb Actions para atualizar o site sempre que um commit for enviado.
 
 `usethis::use_github_action("bookdown")`
+
+Para finalizar, basta configurar a aba Settings -> Pages 
