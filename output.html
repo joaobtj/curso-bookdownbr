@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 O arquivo _output.yml | Publicando um e-book com o bookdown</title>
+  <meta name="description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 O arquivo _output.yml | Publicando um e-book com o bookdown" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://curso-bookdown.tolentino.pro.br/image/cover.jpg" />
+  <meta property="og:description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 O arquivo _output.yml | Publicando um e-book com o bookdown" />
+  
+  <meta name="twitter:description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  <meta name="twitter:image" content="https://curso-bookdown.tolentino.pro.br/image/cover.jpg" />
+
+<meta name="author" content="João B. Tolentino Jr." />
+
+
+<meta name="date" content="2022-11-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="image/cover.jpg" />
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="bkd.html"/>
+<link rel="next" href="index0.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Exemplo de um e-book com configurações em português</a></li>
+<li><a href="./">Prof. João  Tolentino</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> O pacote <strong>bookdown</strong></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#preparativos-iniciais"><i class="fa fa-check"></i><b>1.1</b> Preparativos iniciais</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#escrevendo-um-e-book"><i class="fa fa-check"></i><b>1.2</b> Escrevendo um e-book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bkd.html"><a href="bkd.html"><i class="fa fa-check"></i><b>2</b> O arquivo <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="3" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>3</b> O arquivo <code>_output.yml</code></a></li>
+<li class="chapter" data-level="4" data-path="index0.html"><a href="index0.html"><i class="fa fa-check"></i><b>4</b> O arquivo <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="5" data-path="publicar.html"><a href="publicar.html"><i class="fa fa-check"></i><b>5</b> Publicar o e-book</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="publicar.html"><a href="publicar.html#rstudio-connect"><i class="fa fa-check"></i><b>5.1</b> RStudio Connect</a></li>
+<li class="chapter" data-level="5.2" data-path="publicar.html"><a href="publicar.html#netlify-drop"><i class="fa fa-check"></i><b>5.2</b> Netlify Drop</a></li>
+<li class="chapter" data-level="5.3" data-path="publicar.html"><a href="publicar.html#githubpages"><i class="fa fa-check"></i><b>5.3</b> GitHub Pages</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Publicando um e-book com o bookdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="output" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> O arquivo <code>_output.yml</code><a href="output.html#output" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este é um exemplo do conteúdo do arquivo <code>_output.yml</code></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="output.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span><span class="co"> #https://bookdown.org/yihui/bookdown/html.html#gitbook-style</span></span>
+<span id="cb6-2"><a href="output.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">css</span><span class="kw">:</span><span class="at"> style.css</span><span class="co"> #arquivo .css</span></span>
+<span id="cb6-3"><a href="output.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">split_by</span><span class="kw">:</span><span class="at"> chapter</span><span class="co"> #rmd, none, chapter, section, chapter+number, section+number</span></span>
+<span id="cb6-4"><a href="output.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">split_bib</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span><span class="co"> #yes: adiciona as referências em cada página</span></span>
+<span id="cb6-5"><a href="output.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">includes</span><span class="kw">:</span></span>
+<span id="cb6-6"><a href="output.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">in_header</span><span class="kw">:</span><span class="at"> ga.html</span><span class="co"> #incluir códigos no HEAD do html, por exemplo, google analytics</span></span>
+<span id="cb6-7"><a href="output.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb6-8"><a href="output.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span></span>
+<span id="cb6-9"><a href="output.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">collapse</span><span class="kw">:</span><span class="at"> none</span><span class="co"> #subsection, section, none</span></span>
+<span id="cb6-10"><a href="output.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">scroll_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb6-11"><a href="output.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">      before</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb6-12"><a href="output.html#cb6-12" aria-hidden="true" tabindex="-1"></a>        &lt;li&gt;&lt;a href=&quot;./&quot;&gt;Exemplo mínimo de um e-book&lt;/a&gt;&lt;/li&gt;</span>
+<span id="cb6-13"><a href="output.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">      after</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb6-14"><a href="output.html#cb6-14" aria-hidden="true" tabindex="-1"></a>        &lt;li&gt;&lt;a href=&quot;https://github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Publicado com bookdown&lt;/a&gt;&lt;/li&gt;</span>
+<span id="cb6-15"><a href="output.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toolbar</span><span class="kw">:</span></span>
+<span id="cb6-16"><a href="output.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">position</span><span class="kw">:</span><span class="at"> fixed</span><span class="co"> #fixed, static</span></span>
+<span id="cb6-17"><a href="output.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb6-18"><a href="output.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fontsettings</span><span class="kw">:</span></span>
+<span id="cb6-19"><a href="output.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> white</span><span class="co"> #white, night, sepia</span></span>
+<span id="cb6-20"><a href="output.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">family</span><span class="kw">:</span><span class="at"> serif</span><span class="co"> #sans, serif</span></span>
+<span id="cb6-21"><a href="output.html#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">size</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co"> #1 a 4</span></span>
+<span id="cb6-22"><a href="output.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">download</span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb6-23"><a href="output.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sharing</span><span class="kw">:</span></span>
+<span id="cb6-24"><a href="output.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">whatsapp</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb6-25"><a href="output.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">facebook</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb6-26"><a href="output.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">twitter</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb6-27"><a href="output.html#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">linkedin</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span>
+<span id="cb6-28"><a href="output.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weibo</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span>
+<span id="cb6-29"><a href="output.html#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">instapaper</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span>
+<span id="cb6-30"><a href="output.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">vk</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span>
+<span id="cb6-31"><a href="output.html#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">all</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&#39;whatsapp&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;facebook&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;twitter&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;linkedin&#39;</span><span class="kw">]</span></span>
+<span id="cb6-32"><a href="output.html#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">info</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span></code></pre></div>
+<p>Para a saída GitBook (<code>bookdown::gitbook</code>), algumas das configurações são as seguintes:</p>
+<ul>
+<li><p><code>css</code>: para fornecer um ou mais arquivos CSS personalizados.</p></li>
+<li><p><code>split_by</code>: especifica como dividir e nomear os arquivos HTML em múltiplas páginas. As opções são:</p>
+<ul>
+<li><code>rmd</code>: cada arquivo Rmd cria um arquivo HTML.</li>
+<li><code>none</code>: não separa o arquivo, ou seja, o livro todo está contido em um único HTML.</li>
+<li><code>chapter</code>: separa para cada cabeçalho de primeiro nível.</li>
+<li><code>section</code>: separa para cada cabeçalho de segundo nível.</li>
+<li><code>chapter+number</code> and <code>section+number</code>: similar a <code>chapter</code> e <code>section</code>, mas os arquivos são numerados.</li>
+</ul></li>
+<li><p><code>split_bib</code>: se <code>split_bib = true</code> adiciona as referências ao final de cada página. Caso <code>split_bib = false</code>, as referências são colocadas em uma página dedicada no final.</p></li>
+<li><p><code>includes</code>: possibilita incluir um código HTML no arquivo de saída. Uma opção comum é incluir o código do Google Analytics (veja mais em <a href="http://tolentino.pro.br/post/google-analytics/">Google Analytics no Bookdown</a>). As opções dentro de <code>includes</code> são <code>in_header</code>, <code>before_body</code> e <code>after_body</code>.</p></li>
+</ul>
+<p>As opções indentadas dentro de <code>config</code> são:</p>
+<ul>
+<li><p><code>toc</code>: controla o sumário (table of contents), que aparece no lado direiro da tela.</p>
+<ul>
+<li><code>collapse</code>: controla o desdobramento inicial do sumário. Os valores possíveis são: <code>subsection</code>, que desdobra o sumário até o segundo nível, <code>section</code> que desdobra o sumário até o primeiro nível e <code>none</code> que não desdobra.</li>
+<li><code>scroll_highlight</code>: se <code>true</code>, destaca o item atual do sumário enquanto você rola a página.</li>
+<li><code>before</code> and <code>after</code>: adiciona itens antes e/ou depois do sumário. A tag <code>&lt;li&gt;</code> separa os itens do sumário. O caracter |</li>
+</ul></li>
+<li><p><code>toolbar</code>: controla o comportamento da barra superior.</p>
+<ul>
+<li><code>position</code>: os valores podem ser <code>fixed</code>, que fixa a barra superior e ela estará sempre visível mesmo quando a página é rolada, ou <code>static</code>, que não rola a barra junto com a página, ou seja, ela não ficará mais visível conforme a página é rolada.</li>
+</ul></li>
+<li><p><code>search</code>: se <code>true</code>, adiciona um botão de busca na barra superior.</p></li>
+<li><p><code>fontsettings</code>: ajusta os valores iniciais para o tema e fonte. Para desativar, ajuste o valor para <code>null</code>.</p>
+<ul>
+<li><code>theme</code>: os valores são <code>white</code> para um tema claro, <code>night</code> para um tema escuro e <code>sepia</code> para um tema com efeito envelhecido.</li>
+<li><code>family</code>: <code>serif</code> para uma fonte serifada <a href="https://pt.wikipedia.org/wiki/Serifa">(O que é uma fonte serifada?)</a> ou <code>sans</code> para uma fonte não serifada.</li>
+<li><code>size</code>: tamanho da fonte, entre 1 e 4</li>
+</ul></li>
+<li><p><code>info</code>: botão de informação que lista os atalhos do teclado. Para desativar, definir como <code>false</code>.</p></li>
+<li><p><code>sharing</code>: Adiciona botões para compartilhamento em redes sociais. Para desativar, definir como <code>null</code>.</p>
+<ul>
+<li><code>whatsapp</code>: se definido como <code>true</code>, um botão para compartilhar a página no whatsapp irá aparecer na barra superior. Outras opções de redes sociais são: facebook, twitter, linkedin, weibo, instapaper, vk.</li>
+<li><code>all</code>: opções que irão aparacer no menu <em>dropdown</em> de compartilhamento.</li>
+</ul></li>
+</ul>
+<p>Mais configurações podem ser encontradas na ajuda das funções <code>bookdown::gitbook</code>e <code>rmarkdown::html_document</code></p>
+<ul>
+<li><p><code>number_sections</code>: TRUE to number section headings</p></li>
+<li><p><code>global_numbering</code>: If TRUE, number figures and tables globally throughout a document (e.g., Figure 1, Figure 2, …). If FALSE, number them sequentially within sections (e.g., Figure 1.1, Figure 1.2, …, Figure 5.1, Figure 5.2, …). Note that global_numbering = FALSE will not work with number_sections = FALSE because sections are not numbered.</p></li>
+<li><p><code>code_folding</code>:<br />
+Enable document readers to toggle the display of R code chunks. Specify “none” to display all code chunks. Specify “hide” or “show” to hide or show all R code chunks by default, and let readers toggle the states on browsers. See the Code folding</p></li>
+<li><p><code>toc_depth</code>: Depth of headers to include in table of contents.</p></li>
+</ul>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="bkd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index0.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": true,
+"all": ["whatsapp", "facebook", "twitter", "linkedin"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/joaobtj/curso-bookdownbr/edit/main/020-output.Rmd",
+"text": "Editar"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/joaobtj/curso-bookdownbr/blob/main/020-output.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+fig:ident-bookdown
+o-pacote-bookdown
+preparativos-iniciais
+escrevendo-um-e-book
+bkd
+output
+index0
+publicar
+rstudio-connect
+netlify-drop
+githubpages

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 O arquivo _bookdown.yml | Publicando um e-book com o bookdown</title>
+  <meta name="description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 O arquivo _bookdown.yml | Publicando um e-book com o bookdown" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://curso-bookdown.tolentino.pro.br/image/cover.jpg" />
+  <meta property="og:description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 O arquivo _bookdown.yml | Publicando um e-book com o bookdown" />
+  
+  <meta name="twitter:description" content="Este é um exemplo de um livro publicado com o pacote bookdown no formato gitbook" />
+  <meta name="twitter:image" content="https://curso-bookdown.tolentino.pro.br/image/cover.jpg" />
+
+<meta name="author" content="João B. Tolentino Jr." />
+
+
+<meta name="date" content="2022-11-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="image/cover.jpg" />
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="index.html"/>
+<link rel="next" href="output.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Exemplo de um e-book com configurações em português</a></li>
+<li><a href="./">Prof. João  Tolentino</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> O pacote <strong>bookdown</strong></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#preparativos-iniciais"><i class="fa fa-check"></i><b>1.1</b> Preparativos iniciais</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#escrevendo-um-e-book"><i class="fa fa-check"></i><b>1.2</b> Escrevendo um e-book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bkd.html"><a href="bkd.html"><i class="fa fa-check"></i><b>2</b> O arquivo <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="3" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>3</b> O arquivo <code>_output.yml</code></a></li>
+<li class="chapter" data-level="4" data-path="index0.html"><a href="index0.html"><i class="fa fa-check"></i><b>4</b> O arquivo <code>index.Rmd</code></a></li>
+<li class="chapter" data-level="5" data-path="publicar.html"><a href="publicar.html"><i class="fa fa-check"></i><b>5</b> Publicar o e-book</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="publicar.html"><a href="publicar.html#rstudio-connect"><i class="fa fa-check"></i><b>5.1</b> RStudio Connect</a></li>
+<li class="chapter" data-level="5.2" data-path="publicar.html"><a href="publicar.html#netlify-drop"><i class="fa fa-check"></i><b>5.2</b> Netlify Drop</a></li>
+<li class="chapter" data-level="5.3" data-path="publicar.html"><a href="publicar.html#githubpages"><i class="fa fa-check"></i><b>5.3</b> GitHub Pages</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Publicando um e-book com o bookdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bkd" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> O arquivo <code>_bookdown.yml</code><a href="bkd.html#bkd" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este é um exemplo do conteúdo do arquivo <code>_bookdown.yml</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="bkd.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">book_filename</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;ebook&quot;</span></span>
+<span id="cb5-2"><a href="bkd.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">delete_merged_file</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-3"><a href="bkd.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">before_chapter_script</span><span class="kw">:</span><span class="at"> rm.R</span></span>
+<span id="cb5-4"><a href="bkd.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">after_chapter_script</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="bkd.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">edit</span><span class="kw">:</span><span class="at"> https://github.com/joaobtj/curso-bookdownbr/edit/main/%s</span></span>
+<span id="cb5-6"><a href="bkd.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span><span class="kw">:</span><span class="at"> https://github.com/joaobtj/curso-bookdownbr/blob/main/%s</span></span>
+<span id="cb5-7"><a href="bkd.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">output_dir</span><span class="kw">:</span><span class="at"> _book </span></span>
+<span id="cb5-8"><a href="bkd.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span></span>
+<span id="cb5-9"><a href="bkd.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">label</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="bkd.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fig</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Figura &#39;</span></span>
+<span id="cb5-11"><a href="bkd.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tab</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Tabela &#39;</span></span>
+<span id="cb5-12"><a href="bkd.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">eq</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Equação &#39;</span></span>
+<span id="cb5-13"><a href="bkd.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">thm</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Teorema &#39;</span></span>
+<span id="cb5-14"><a href="bkd.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">lem</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Lema &#39;</span></span>
+<span id="cb5-15"><a href="bkd.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cor</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Corolário &#39;</span></span>
+<span id="cb5-16"><a href="bkd.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">prp</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Proposição &#39;</span></span>
+<span id="cb5-17"><a href="bkd.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cnj</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Conjetura &#39;</span></span>
+<span id="cb5-18"><a href="bkd.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">def</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Definição &#39;</span></span>
+<span id="cb5-19"><a href="bkd.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">exm</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Exemple &#39;</span></span>
+<span id="cb5-20"><a href="bkd.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">exr</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Exercício &#39;</span></span>
+<span id="cb5-21"><a href="bkd.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">hyp</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Hipótese &#39;</span></span>
+<span id="cb5-22"><a href="bkd.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">proof</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Prova &#39;</span></span>
+<span id="cb5-23"><a href="bkd.html#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">remark</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Observação &#39;</span></span>
+<span id="cb5-24"><a href="bkd.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">solution</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Solução &#39;</span></span>
+<span id="cb5-25"><a href="bkd.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ui</span><span class="kw">:</span></span>
+<span id="cb5-26"><a href="bkd.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">edit</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Editar &#39;</span></span>
+<span id="cb5-27"><a href="bkd.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">chapter_name</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Capítulo &#39;</span></span>
+<span id="cb5-28"><a href="bkd.html#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">appendix_name</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Apêndice &#39;</span></span></code></pre></div>
+<ul>
+<li><p><code>book_filename</code>: nome do arquivo gerado (Rmd, PDF, ePub, etc)</p></li>
+<li><p><code>delete_merged_file</code>: deleta o arquivo Rmd depois de livro ser renderizado com sucesso</p></li>
+<li><p><code>before_chapter_script</code> and <code>after_chapter_script</code>: um ou mais <em>scripts</em> em R a serem executados antes (<em>before</em>) ou depois (<em>after</em>) de cada capítulo.</p></li>
+<li><p><code>edit</code>: um link para colaboradores poderem editar o arquivo fonte do documento. Comumente é um repositório Git (GitHub ou GitLab). O link deve finalizar com <code>%s</code>.</p></li>
+<li><p><code>view</code>: semelhante ao <code>edit</code>, um link para visualizar o arquivo fonte.</p></li>
+<li><p><code>output_dir</code>: diretório onde será renderizado o livro. Veja mais no Capítulo <a href="publicar.html#githubpages">5.3</a>.</p></li>
+<li><p><code>new_session</code>: usar uma sessão nova do R ara compilar cada arquivo Rmd individualmente.</p></li>
+<li><p><code>language</code>: permite a tradução de termos para o idioma desejado.</p></li>
+</ul>
+<p>Muito cuidado com a <a href="https://pt.wikipedia.org/wiki/Indenta%C3%A7%C3%A3o">indentação</a> na formatação do arquivo. Cada nível deve ser iniciado com 2 espaços, por exemplo, <code>language</code> inicia na margem esquerda do arquivo. <code>label</code> inicia a dois espaços da mergem. <code>fig</code> inicia a 4 espaços da margem (dois a mais que <code>label</code>).</p>
+
+<div class="figure"><span style="display:block;" id="fig:ident-bookdown"></span>
+<img src="image/indent-bookdown.png" alt="Exemplo de indentação no arquivo _bookdown.yml." width="400pt" />
+<p class="caption">
+Figura 2.1: Exemplo de indentação no arquivo <code>_bookdown.yml</code>.
+</p>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="output.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": true,
+"all": ["whatsapp", "facebook", "twitter", "linkedin"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/joaobtj/curso-bookdownbr/edit/main/010-bookdown.Rmd",
+"text": "Editar"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/joaobtj/curso-bookdownbr/blob/main/010-bookdown.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+</body>
+
+</html>
