@@ -1,0 +1,29 @@
+book_filename: "bookdownbr"
+delete_merged_file: true
+before_chapter_script: rm.R
+after_chapter_script:
+edit: https://github.com/joaobtj/curso-bookdownbr/edit/main/%s
+view: https://github.com/joaobtj/curso-bookdownbr/blob/main/%s
+output_dir: public 
+new_session: false
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabela '
+    eq: 'Equação '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolário '
+    prp: 'Proposição '
+    cnj: 'Conjetura '
+    def: 'Definição '
+    exm: 'Exemple '
+    exr: 'Exercício '
+    hyp: 'Hipótese '
+    proof: 'Prova '
+    remark: 'Observação '
+    solution: 'Solução '
+  ui:
+    edit: Editar
+    chapter_name: 'Capítulo '
+    appendix_name: 'Apêndice '

@@ -1,0 +1,12 @@
+book*
+public/
+libs/
+rsconnect/
+README.html
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rdata
+.httr-oauth
+.DS_Store
